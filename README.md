@@ -1,32 +1,31 @@
 # 🔐 QRShield Pay
 
 ## 📌 Overview
-QRShield Pay is a secure QR-based payment simulation system that integrates encryption, digital signatures, and rule-based fraud detection.
+QRShield Pay is a secure QR-based payment simulation system with encryption, digital signature verification, and rule-based fraud detection.
 
 ---
 
 ## 🚀 Features
-- QR code generation for transactions
-- AES-style encryption (Fernet)
+- QR code-based transaction generation
+- Fernet encryption for data security
 - RSA digital signature verification
-- Rule-based fraud detection system
+- Multi-factor fraud detection system
 - Risk classification (Low / Medium / High)
-- Clean Gradio UI for simulation
+- Clean Gradio UI
 
 ---
 
 ## 🧠 Fraud Detection Logic
-The system evaluates transactions using multiple factors:
-
+The system evaluates:
 - Transaction amount
 - Time of transaction
-- Location (simulated)
+- Location risk
 - Device type
 - Transaction frequency
 
-Based on these, it assigns a risk score and classifies:
+Final output:
 - LOW RISK → Approved
-- MEDIUM RISK → Warning / OTP simulation
+- MEDIUM RISK → Suspicious
 - HIGH RISK → Blocked
 
 ---
@@ -34,13 +33,11 @@ Based on these, it assigns a risk score and classifies:
 ## 🛠 Tech Stack
 - Python
 - Gradio
-- Cryptography (Fernet + RSA)
-- QRCode library
-- OpenCV (QR handling)
+- Cryptography
+- QRCode
+- PIL
 
----
 
-## ▶ How to Run
 
 ```bash
 pip install -r requirements.txt
